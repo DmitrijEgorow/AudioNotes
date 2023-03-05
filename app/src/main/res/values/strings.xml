@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Аудио заметки</string>
+    <string name="all_tasks">Все заметки</string>
+    <string name="record_new_audionote">Новая заметка</string>
+    <string name="recording_timeout">Превышен лимит записи</string>
+    <string name="recording_error">Что-то пошло не так</string>
+    <string name="date_pattern">dd.MM.yyyy в hh:mm</string>
+    <string name="model_en_us" translatable="false">model-en-us</string>
+</resources>

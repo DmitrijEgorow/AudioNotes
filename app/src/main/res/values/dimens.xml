@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="content_main_padding">18dp</dimen>
+    <dimen name="icon_padding">16dp</dimen>
+
+    <dimen name="size_xs">4dp</dimen>
+    <dimen name="size_s">16dp</dimen>
+    <dimen name="size_m">32dp</dimen>
+    <dimen name="size_l">48dp</dimen>
+    <dimen name="size_xl">64dp</dimen>
+    <dimen name="keyline">72dp</dimen>
+    <dimen name="ruler_weight">2dp</dimen>
+</resources>

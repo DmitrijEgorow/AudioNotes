@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AudioNotes</string>
+    <string name="all_tasks">All recordings</string>
+    <string name="record_new_audionote">Record new audio note</string>
+    <string name="recording_timeout">Recording came to an abrupt end because of timeout</string>
+    <string name="recording_error">Something went wrong</string>
+    <string name="date_pattern">dd.MM.yyyy \'at\' hh:mm a</string>
+    <string name="model_en_us" translatable="false">model-en-us</string>
+</resources>
