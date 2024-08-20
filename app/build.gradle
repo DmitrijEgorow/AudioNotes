@@ -48,7 +48,7 @@ dependencies {
     implementation project(':models')
 
     implementation("io.realm.kotlin:library-base:1.5.0")
-    implementation("io.realm:android-adapters:4.0.0")
+    // implementation("io.realm:android-adapters:4.0.0")
     implementation 'com.google.code.gson:gson:2.10.1'
     androidTestImplementation 'io.github.kakaocup:kakao:3.2.2'
     androidTestImplementation 'androidx.test.espresso:espresso-accessibility:3.5.1'

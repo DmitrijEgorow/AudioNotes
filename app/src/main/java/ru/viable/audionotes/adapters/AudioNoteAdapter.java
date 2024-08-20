@@ -10,13 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import io.realm.OrderedRealmCollection;
-import io.realm.RealmRecyclerViewAdapter;
 import ru.viable.audionotes.R;
 import ru.viable.audionotes.db.AudioNote;
 import ru.viable.audionotes.db.AudioNoteListChangeListener;
 import ru.viable.audionotes.db.RealmManager;
 
-public class AudioNoteAdapter extends RealmRecyclerViewAdapter<AudioNote, AudioNoteAdapter.AudioNotesViewHolder> {
+public class AudioNoteAdapter extends RealmRVAdapter<AudioNote, AudioNoteAdapter.AudioNotesViewHolder> {
 
     OrderedRealmCollection<AudioNote> data;
     AudioNoteListChangeListener listener;

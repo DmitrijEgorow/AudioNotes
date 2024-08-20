@@ -1,6 +1,7 @@
 package ru.viable.audionotes.ui
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.icu.text.SimpleDateFormat
 import android.icu.util.Calendar
@@ -43,7 +44,7 @@ import java.util.TimerTask
 
 class MainActivity : AppCompatActivity() {
 
-    private val tag = "Tests"
+    private val tag = "AudioTests"
     private val requestCode = 1
 
     private lateinit var binding: ActivityMainBinding
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
     private var adapter: AudioNoteAdapter? = null
 
     private lateinit var calendar: Calendar
-    private val timeout = 10_000
+    private val timeout = 60_000
 
     private var model: Model? = null
     private var speechService: SpeechService? = null
@@ -111,7 +112,7 @@ class MainActivity : AppCompatActivity() {
                 val now = calendar.time
                 val df = SimpleDateFormat(getString(R.string.date_pattern), Locale.getDefault())
                 val formattedDate: String = df.format(now)
-                Log.d(tag, "$now $formattedDate $recognizedNote")
+                Log.d(tag, "$now $recognizedNote")
                 if (recognizedNote.text.isNotEmpty()) {
                     addNewAudioNote(recognizedNote.text, formattedDate)
                 }
@@ -187,6 +188,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun addNewAudioNote(text: String, date: String) {
         realmManager.insertNote(AudioNote(text, date))
+
+        val shareIntent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, text)
+            type = "text/plain"
+        }
+        startActivity(Intent.createChooser(shareIntent, "AudioNote"))
     }
 
     private fun setUiElementsBusy(isInProgress: Boolean = true) {
